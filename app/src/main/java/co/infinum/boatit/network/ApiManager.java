@@ -60,6 +60,7 @@ public class ApiManager {
         RestAdapter.Builder builder = new RestAdapter.Builder()
                 .setClient(okClient)
                 .setEndpoint(API_ENDPOINT)
+                .setRequestInterceptor(new Interceptor())
                 .setConverter(new GsonConverter(gson))
                 .setLog(LOG)
                 .setLogLevel(RestAdapter.LogLevel.FULL);
