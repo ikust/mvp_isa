@@ -16,4 +16,5 @@
     <dimen name="text_size_largest">30sp</dimen>
     <dimen name="text_size_extra_large">42sp</dimen>
     <dimen name="text_size_supersized">60sp</dimen>
+    <dimen name="list_image_size">70dp</dimen>
 </resources>
