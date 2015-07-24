@@ -1,30 +1,18 @@
 package co.infinum.boatit;
 
-import co.infinum.boatit.network.BoatItService;
+import co.infinum.boatit.network.TestApiManager;
 
 /**
  * Created by ivan on 24/07/15.
  */
 public class TestBoatApplication extends BoatApplication {
 
-    private static TestBoatApplication instance;
+    protected void init() {
+        //Initialize mock API manager.
 
-    @Override
-    public void onCreate() {
-        super.onCreate();
-        instance = this;
-        init();
+        TestApiManager.getInstance().init();
+
+        apiManager = TestApiManager.getInstance();
     }
 
-    public static TestBoatApplication getInstance() {
-        return instance;
-    }
-
-    private void init() {
-
-    }
-
-    public static BoatItService getApiService() {
-        return null;
-    }
 }
