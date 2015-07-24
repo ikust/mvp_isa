@@ -11,7 +11,7 @@ android {
         targetSdkVersion 22
         versionCode 1
         versionName "1.0"
-        testApplicationId "co.infinum.hpb.instrument.test"
+        testApplicationId "co.infinum.boatit.instrument.test"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
     }
