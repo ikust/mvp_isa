@@ -3,6 +3,7 @@ package co.infinum.boatit;
 import android.app.Application;
 
 import co.infinum.boatit.network.ApiManager;
+import co.infinum.boatit.network.ApiManagerImpl;
 import co.infinum.boatit.network.BoatItService;
 
 /**
@@ -11,6 +12,8 @@ import co.infinum.boatit.network.BoatItService;
 public class BoatApplication extends Application {
 
     private static BoatApplication instance;
+
+    protected ApiManager apiManager;
 
     @Override
     public void onCreate() {
@@ -23,11 +26,13 @@ public class BoatApplication extends Application {
         return instance;
     }
 
-    private void init() {
-        ApiManager.getInstance().init();
+    protected void init() {
+        ApiManagerImpl.getInstance().init();
+
+        apiManager = ApiManagerImpl.getInstance();
     }
 
     public static BoatItService getApiService() {
-        return ApiManager.getInstance().getService();
+        return getInstance().apiManager.getService();
     }
 }
