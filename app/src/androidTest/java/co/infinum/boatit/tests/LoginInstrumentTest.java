@@ -43,9 +43,7 @@ public class LoginInstrumentTest extends ActivityInstrumentationTestCase2<LoginA
         Espresso.onView(ViewMatchers.isRoot()).perform(ViewActions.swipeDown());
         Espresso.onView(ViewMatchers.withId(R.id.login)).perform(ViewActions.click());
 
-//
-//        //New activity is shown
-//
+        //New activity is shown
         Espresso.onView(ViewMatchers.withText("MVP")).check(ViewAssertions.matches(ViewMatchers.isDisplayed()));
 
     }
