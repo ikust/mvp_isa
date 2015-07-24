@@ -11,7 +11,7 @@ android {
         targetSdkVersion 22
         versionCode 1
         versionName "1.0"
-        testApplicationId "co.infinum.hpb.instrument.test"
+        testApplicationId "co.infinum.boatit.instrument.test"
     }
     buildTypes {
         release {
@@ -66,4 +66,9 @@ dependencies {
         exclude module: 'wagon-http-lightweight'
         exclude module: 'wagon-provider-api'
     }
+
+    // espresso tests
+    androidTestCompile 'com.android.support.test:runner:0.3'
+    androidTestCompile 'com.android.support.test:rules:0.3'
+    androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2'
 }

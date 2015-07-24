@@ -8,6 +8,7 @@ import co.infinum.boatit.network.TestApiManager;
 public class TestBoatApplication extends BoatApplication {
 
     protected void init() {
+
         //Initialize mock API manager.
 
         TestApiManager.getInstance().init();
