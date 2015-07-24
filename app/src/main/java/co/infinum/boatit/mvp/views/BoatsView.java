@@ -13,4 +13,6 @@ public interface BoatsView extends BaseView {
 
     void onBoatListEmpty();
 
+    void onTokenExpired();
+
 }

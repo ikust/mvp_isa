@@ -1,8 +1,6 @@
 package co.infinum.boatit.network;
 
-import java.util.List;
-
-import co.infinum.boatit.models.Boat;
+import co.infinum.boatit.models.BoatResponse;
 import co.infinum.boatit.models.LoginRequest;
 import co.infinum.boatit.models.LoginResponse;
 import retrofit.Callback;
@@ -19,5 +17,5 @@ public interface BoatItService {
     void login(@Body LoginRequest request, Callback<LoginResponse> callback);
 
     @GET("/api/v1/posts")
-    void getBoats(Callback<List<Boat>> callback);
+    void getBoats(Callback<BoatResponse> callback);
 }

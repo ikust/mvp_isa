@@ -4,6 +4,8 @@ import com.google.gson.annotations.SerializedName;
 
 import java.io.Serializable;
 
+import co.infinum.boatit.enums.UserAuthorized;
+
 /**
  * Created by kjurkovic on 20/07/15.
  */
@@ -21,6 +23,9 @@ public class User implements Serializable {
     @SerializedName("email")
     private String email;
 
+    @SerializedName("is_authorized")
+    private UserAuthorized authorized;
+
     public String getToken() {
         return token;
     }
@@ -35,5 +40,9 @@ public class User implements Serializable {
 
     public String getEmail() {
         return email;
+    }
+
+    public UserAuthorized getAuthorized() {
+        return authorized;
     }
 }

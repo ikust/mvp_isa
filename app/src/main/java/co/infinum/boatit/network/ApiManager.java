@@ -10,6 +10,8 @@ import android.util.Log;
 import java.net.CookieManager;
 import java.util.concurrent.Executor;
 
+import co.infinum.boatit.enums.UserAuthorized;
+import co.infinum.boatit.network.deserializers.UserAuthorizedDeserializer;
 import retrofit.RestAdapter;
 import retrofit.client.OkClient;
 import retrofit.converter.GsonConverter;
@@ -23,7 +25,10 @@ public class ApiManager {
 
     public static final String API_ENDPOINT = "https://boatit.infinum.co";
 
-    private Gson gson = new GsonBuilder().create();
+    private Gson gson = new GsonBuilder()
+            .registerTypeAdapter(UserAuthorized.class, new UserAuthorizedDeserializer())
+            .setDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSZ")
+            .create();
 
     private static final RestAdapter.Log LOG = new RestAdapter.Log() {
         @Override

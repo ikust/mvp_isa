@@ -10,4 +10,5 @@
     <string name="login_failed">Login failed. Check your credentials and try again</string>
     <string name="please_wait">Please wait...</string>
     <string name="comments_num" formatted="false">Comments: %d</string>
+    <string name="error_boats">Greska kod dohvata</string>
 </resources>

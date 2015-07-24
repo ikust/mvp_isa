@@ -12,6 +12,11 @@ buildscript {
 
 allprojects {
 
+    tasks.withType(JavaCompile) {
+        sourceCompatibility = "1.7"
+        targetCompatibility = "1.7"
+    }
+
     repositories {
         maven { url "http://dl.bintray.com/populov/maven" }
         maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }

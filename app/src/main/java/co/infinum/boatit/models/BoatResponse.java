@@ -9,7 +9,7 @@ import java.util.List;
  */
 public class BoatResponse {
 
-    @SerializedName("boats")
+    @SerializedName("response")
     private List<Boat> boats;
 
     public List<Boat> getBoats() {
